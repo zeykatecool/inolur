@@ -5,7 +5,7 @@ var provider = new steam.SteamProvider();
 exports.run = (client, message, args) => {
     let game = args[0]
     let steampng = "https://cdn.discordapp.com/attachments/458004691402489856/470344660364034049/steam.png"
-    if (!game) return message.reply('Lütfen Steamde Olan Bir Oyunun Adını Yazın. Örnek: `z!steam ets2')
+    if (!game) return message.reply('Lütfen Steamde Olan Bir Oyunun Adını Yazın. Örnek: `!steam ets2')
     provider.search(game).then(result => {
     provider.detail(result[0].id, "turkey", "tr").then(results => {
         console.log(results)
